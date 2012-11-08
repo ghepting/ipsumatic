@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">	
+	<title>ipsumatic</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="../responsiveText/jquery-1.8.2.min.js" type="text/javascript"><\/script>')</script>
+	<script type="text/javascript" src="../responsiveText/jquery.responsiveText.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.heading').responsiveText({
+				agressiveness: 8
+			});
+			$('.subheading').responsiveText({
+				agressiveness: 25,
+				minSize: 14,
+				maxSize: 40
+			});
+			$('.button').responsiveText({
+				agressiveness: 25,
+				minSize: 30,
+				maxSize: 50
+			});
+			$('textarea').focus(function(e) {
+				var $this = $(this);
+				$this.select();
+				$this.mouseup(function() {
+					$this.unbind("mouseup");
+					return false;
+				});
+			});
+		});
+	</script>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico|Average+Sans' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		body {margin:0; padding:20px; font-family: 'Average Sans', sans-serif; font-size:16px; font-weight:normal; line-height:1.5; background:#589283; color:#fff; text-shadow:2px 2px 2px #3F6558;}
+		a, a:link, a:visited {color:#fff;text-decoration: none;border-bottom:1px dashed #3F6558;-webkit-transition:border-color 0.3s ease-in;}
+		a:hover, a:focus {border-bottom:1px dashed #fff;}
+		h1, h2, h3 {text-align:center; line-height:1.2;}
+		.heading {margin-top:0.25em;font-family:'Pacifico', sans-serif; text-shadow:0.1em 0.1em 2px #3F6558;}
+		.subheading {font-weight:normal;}
+		legend {font-size:2em;font-family:'Pacifico', sans-serif; text-shadow:0.1em 0.1em 2px #3F6558;}
+		fieldset {box-sizing:border-box;width:48%;float:left;border-radius:20px; border:1px solid #3F6558; margin:1%;background:#3F6558;padding:15px 30px 25px;}
+		textarea {font-size:16px;color:#d9d9d9;box-sizing:border-box;width:100%;background:#589283;border:none;padding:2em;overflow:hidden;}
+		textarea:focus {color:#fff;outline:5px solid #839E9A;overflow:auto;}
+		textarea::selection {background: #589283;color:#fff;}
+		textarea::-moz-selection {background: #589283;color:#fff;}
+	</style>
+</head>
+
+<body>
+	
+	<h1 class="heading">ipsumatic</h1>
+	
+	<fieldset>
+		<legend>Long Paragraph</legend>
+		<textarea rows="10" cols="50" class="para">&lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus&lt;/p&gt;</textarea>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Medium Paragraph</legend>
+		<textarea rows="10" cols="50" class="para">&lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;</textarea>
+	</fieldset>
+	
+	<fieldset>
+		<legend>One Sentence</legend>
+		<textarea rows="10" cols="50" class="para">&lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;/p&gt;</textarea>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Definition List</legend>
+		<textarea rows="10" cols="50">&lt;dl&gt;
+	&lt;dt&gt;Definition list&lt;/dt&gt;
+	&lt;dd&gt;Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+commodo consequat.&lt;/dd&gt;
+	&lt;dt&gt;Lorem ipsum dolor sit amet&lt;/dt&gt;
+	&lt;dd&gt;Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+commodo consequat.&lt;/dd&gt;
+&lt;/dl&gt;</textarea>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Unordered List: Short Items</legend>
+		<textarea rows="10" cols="50">&lt;ul&gt;
+	&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+	&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+	&lt;li&gt;Vestibulum auctor dapibus neque.&lt;/li&gt;
+&lt;/ul&gt;</textarea>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Unordered List: Long Items</legend>
+		<textarea rows="10" cols="50">&lt;ul&gt;
+	&lt;li&gt;Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.&lt;/li&gt;
+	&lt;li&gt;Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.&lt;/li&gt;
+	&lt;li&gt;Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.&lt;/li&gt;
+	&lt;li&gt;Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.&lt;/li&gt;
+&lt;/ul&gt;</textarea>
+	</fieldset>
+
+	<fieldset>
+		<legend>Ordered List: Short Items</legend>
+		<textarea rows="10" cols="50">&lt;ol&gt;
+	&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+	&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+	&lt;li&gt;Vestibulum auctor dapibus neque.&lt;/li&gt;
+&lt;/ol&gt;</textarea>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Unordered List Navigation</legend>
+		<textarea rows="10" cols="50">&lt;nav&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href="#nowhere" title="Lorum ipsum dolor sit amet"&gt;Lorem&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#nowhere" title="Aliquam tincidunt mauris eu risus"&gt;Aliquam&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#nowhere" title="Morbi in sem quis dui placerat ornare"&gt;Morbi&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus"&gt;Praesent&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#nowhere" title="Pellentesque fermentum dolor"&gt;Pellentesque&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;</textarea>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Kitchen Sink</legend>
+		<textarea rows="10" cols="50">&lt;h1&gt;HTML Ipsum Presents&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Pellentesque habitant morbi tristique&lt;/strong&gt; senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. &lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, &lt;code&gt;commodo vitae&lt;/code&gt;, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. &lt;a href="#"&gt;Donec non enim&lt;/a&gt; in turpis pulvinar facilisis. Ut felis.&lt;/p&gt;
+
+&lt;h2&gt;Header Level 2&lt;/h2&gt;
+			
+&lt;ol&gt;
+	&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+	&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;h3&gt;Header Level 3&lt;/h3&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+	&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;
+#header h1 a { 
+	display: block; 
+	width: 300px; 
+	height: 80px; 
+}
+&lt;/code&gt;&lt;/pre&gt;</textarea>
+	</fieldset>
+	
+	
+	<fieldset>
+		<legend>Example Form</legend>
+		<textarea rows="10" cols="50">&lt;form action="#" method="post"&gt;
+	&lt;div&gt;
+			&lt;label for="name"&gt;Text Input:&lt;/label&gt;
+			&lt;input type="text" name="name" id="name" value="" tabindex="1" /&gt;
+	&lt;/div&gt;
+
+	&lt;div&gt;
+			&lt;h4&gt;Radio Button Choice&lt;/h4&gt;
+
+			&lt;label for="radio-choice-1"&gt;Choice 1&lt;/label&gt;
+			&lt;input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" /&gt;
+
+		&lt;label for="radio-choice-2"&gt;Choice 2&lt;/label&gt;
+			&lt;input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" /&gt;
+	&lt;/div&gt;
+
+	&lt;div&gt;
+		&lt;label for="select-choice"&gt;Select Dropdown Choice:&lt;/label&gt;
+		&lt;select name="select-choice" id="select-choice"&gt;
+			&lt;option value="Choice 1"&gt;Choice 1&lt;/option&gt;
+			&lt;option value="Choice 2"&gt;Choice 2&lt;/option&gt;
+			&lt;option value="Choice 3"&gt;Choice 3&lt;/option&gt;
+		&lt;/select&gt;
+	&lt;/div&gt;
+	
+	&lt;div&gt;
+		&lt;label for="textarea"&gt;Textarea:&lt;/label&gt;
+		&lt;textarea cols="40" rows="8" name="textarea" id="textarea"&gt;&lt;/textarea&gt;
+	&lt;/div&gt;
+	
+	&lt;div&gt;
+		&lt;label for="checkbox"&gt;Checkbox:&lt;/label&gt;
+		&lt;input type="checkbox" name="checkbox" id="checkbox" /&gt;
+	&lt;/div&gt;
+
+	&lt;div&gt;
+		&lt;input type="submit" value="Submit" /&gt;
+	&lt;/div&gt;
+&lt;/form&gt;</textarea>
+	</fieldset>
+		
+	<fieldset>
+		<legend>Empty Table</legend>
+		<textarea rows="10" cols="50">&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;&lt;/th&gt;
+			&lt;th&gt;&lt;/th&gt;
+			&lt;th&gt;&lt;/th&gt;
+			&lt;th&gt;&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</textarea>
+	</fieldset>
+		
+	<fieldset>
+		<legend>Standard List Navigation</legend>
+		<textarea rows="10" cols="50">&lt;nav&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Clients&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;</textarea>
+	</fieldset>
+	
+  <div style="clear: both;"></div>
+	
+</body>
+</html>

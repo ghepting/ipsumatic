@@ -1,8 +1,6 @@
 ipsumatic
-=========
+====
 
-ipsumatic! Marked up lorem ipsum placeholder content for even faster rapid prototyping
+A simple tool for rapid prototyping with html-wrapped lorem ipsum placeholder content.
 
-demo
-=========
-visit the demo page here: http://garyhepting.com/ipsumatic/
+http://garyhepting.com/ipsumatic/
